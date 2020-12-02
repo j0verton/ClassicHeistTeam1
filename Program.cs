@@ -147,6 +147,10 @@ namespace classicHeist
             Console.WriteLine("Recon Report:");
             Console.WriteLine($"The Bank's most secure system is:{BankProp.Keys.Last()}");
             Console.WriteLine($"The Bank's least secure system is:{BankProp.Keys.First()}");
+
+            Console.WriteLine("Are you ready to begin the Heist?");
+            Console.WriteLine("press any key");
+            Console.ReadLine();
         }
     }
 }
