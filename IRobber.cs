@@ -1,5 +1,4 @@
 using System;
-
 namespace classicHeist
 {
     public interface IRobber
