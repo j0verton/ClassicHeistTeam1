@@ -4,10 +4,10 @@ namespace classicHeist
 {
     public class Bank
     {
-        public int CashOnHand;
-        public int AlarmScore;
-        public int VaultScore;
-        public int SecurityGuardScore;
+        public int CashOnHand { get; set; }
+        public int AlarmScore { get; set; }
+        public int VaultScore { get; set; }
+        public int SecurityGuardScore { get; set; }
         public bool IsSecure()
         {
             if (AlarmScore + VaultScore + SecurityGuardScore >= 0)
