@@ -2,7 +2,7 @@ using System;
 
 namespace classicHeist
 {
-    class Bank
+    public class Bank
     {
         public int CashOnHand { get; set; }
         public int AlarmScore { get; set; }
