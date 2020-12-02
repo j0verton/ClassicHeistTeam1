@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace classicHeist
 {
@@ -130,6 +131,22 @@ namespace classicHeist
 
             });
 
+            Bank newBank = new Bank();
+            newBank.AlarmScore = new Random().Next(101);
+            newBank.VaultScore = new Random().Next(101);
+            newBank.SecurityGuardScore = new Random().Next(101);
+            newBank.CashOnHand = new Random().Next(50000, 1_000_000);
+            Dictionary<string, int> BankProp = new Dictionary<string, int>()
+            {
+                {"Alarm Score", newBank.AlarmScore},
+                {"Vault Score", newBank.VaultScore},
+                {"Security Guard Score", newBank.SecurityGuardScore},
+            };
+
+            BankProp.OrderBy(key => key.Value);
+            Console.WriteLine("Recon Report:");
+            Console.WriteLine($"The Bank's most secure system is:{BankProp.Keys.Last()}");
+            Console.WriteLine($"The Bank's least secure system is:{BankProp.Keys.First()}");
         }
     }
 }
