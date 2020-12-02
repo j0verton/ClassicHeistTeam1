@@ -10,7 +10,7 @@ namespace classicHeist
         public int SecurityGuardScore { get; set; }
         public bool IsSecure()
         {
-            if (AlarmScore + VaultScore + SecurityGuardScore >= 0)
+            if (AlarmScore + VaultScore + SecurityGuardScore <= 0)
             {
                 return false;
             }
