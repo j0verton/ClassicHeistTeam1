@@ -4,6 +4,7 @@ namespace classicHeist
 {
     public class Muscle : IRobber
     {
+        public string Specialty { get; } = "Muscle";
         public string Name { get; set; }
         public int SkillLevel { get; set; }
         public int PercentageCut { get; set; }

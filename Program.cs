@@ -151,6 +151,13 @@ namespace classicHeist
             Console.WriteLine("Are you ready to begin the Heist?");
             Console.WriteLine("press any key");
             Console.ReadLine();
+            Console.WriteLine("Here are your contacts");
+
+            foreach (IRobber crook in rolodex)
+            {
+                Console.WriteLine($"[{rolodex.FindIndex(target => target.Name == crook.Name)}]{crook.Name} - {crook.Specialty} - Skill Level: {crook.SkillLevel} - Cut: {crook.PercentageCut}%");
+            }
+
         }
     }
 }
